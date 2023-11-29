@@ -12,7 +12,7 @@
     <h2>Pet Adoption Submission</h2>
     <h3>Please Enter The Animals Details Below</h3>
 
-    <form action="process_form.php" method="post">
+    <form action="ADDLATER" method="post">
         <label for="petName">Pet Name:</label>
         <input type="text" id="petName" name="petName" required>
 
@@ -24,6 +24,22 @@
             <option value="Turtle">Turtle</option>
             <option value="Alien">Alien</option>
         </select>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select>
+
+        <label for="neutered">Neutered/Spayed:</label>
+        <select id="neutered" name="neutered" required>
+        <option value="NotSpecified">Not Specified</option>
+        <option value="Neutered">Neutered</option>
+        <option value="Spayed">Spayed</option>
+        <option value="NotNeutered">Not Neutered</option>
+        </select>
+
+
 
         <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" name="dob" required>

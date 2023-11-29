@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
         header("Location: homepage.HTML");
         exit();
     } else {
-        echo "Sorry, wrong credentials";
+        echo "Sorry wrong informatio entered";
     }
 }
 ?>
