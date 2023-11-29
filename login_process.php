@@ -14,12 +14,11 @@ if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();
     
     if ($enteredPassword === $user['password']) {
-        
         $_SESSION['username'] = $enteredUsername;
         header("Location: homepage.HTML");
         exit();
+    } else {
+        echo "Sorry, wrong credentials";
     }
 }
-
-
 ?>
