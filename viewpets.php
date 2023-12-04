@@ -7,7 +7,7 @@
     <title>Pet Adoption Whitegate</title>
 </head>
 <body>
-    <h2>Available Pets for Adoption</h2>
+    <h2>These animals are currently up for adoption today!</h2>
 
     <?php
     date_default_timezone_set('GMT');
@@ -25,7 +25,7 @@
                 '<p>Neutered/Spayed: ' . $row['NeuteredStatus'] . '</p>' .
                 '<p>Date of Birth: ' . $row['DateOfBirth'] . '</p>' .
                 '<p>Description: ' . $row['Description'] . '</p>' .
-                '<a href="adopt.html" class="adopt-button">Adopt Me</a>' .
+                '<a href="adopt.php?PetID=' . $row['PetID'] . '" class="adopt-button">Adopt Me</a>' .
                 '</div>';
         }
     } else {
