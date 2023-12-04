@@ -25,7 +25,7 @@
                 '<p>Neutered/Spayed: ' . $row['NeuteredStatus'] . '</p>' .
                 '<p>Date of Birth: ' . $row['DateOfBirth'] . '</p>' .
                 '<p>Description: ' . $row['Description'] . '</p>' .
-                '<a href="adopt.html" class="adopt-button">Adopt Me</a>' . // Add this line for the button
+                '<a href="adopt.html" class="adopt-button">Adopt Me</a>' .
                 '</div>';
         }
     } else {

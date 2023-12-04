@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet</title>
+    <link rel="stylesheet" href="CSS/adoptstyle.css"> 
+</head>
+<body>
+    <h2>Adopt a Pet</h2>
+
+    <!-- this will be the info that is saved for the pet that the user clicked on -->
+    <div class="pet-details">
+        <h3>Selected Pet: [Pet Name]</h3>
+        <p>Type: [Pet Type]</p>
+        <p>Gender: [Pet Gender]</p>
+        <p>Neutered/Spayed: [Neutered/Spayed Status]</p>
+        <p>Date of Birth: [Pet DOB]</p>
+        <p>Description: [Pet Description]</p>
+    </div>
+
+    <form action="process_adoption.php" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Your Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <button type="submit" class="adopt-button">Submit Adoption Application</button>
+    </form>
+</body>
+</html>
