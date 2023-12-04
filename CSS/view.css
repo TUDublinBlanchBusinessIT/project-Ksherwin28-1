@@ -37,3 +37,20 @@ h2 {
     text-align: center;
     color: #888;
 }
+
+
+.adopt-button {
+    display: block;
+    background-color: #b20000;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px; 
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 20%;
+}
+
+.adopt-button:hover {
+    background-color: #900000;
+}

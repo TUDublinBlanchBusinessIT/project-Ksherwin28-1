@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Adoption Whitegate</title>
-
 </head>
 <body>
     <h2>Available Pets for Adoption</h2>
@@ -13,7 +12,6 @@
     <?php
     date_default_timezone_set('GMT');
     include('dbcon.php');
-
 
     $sql = "SELECT * FROM petadoption";
     $result = $conn->query($sql);
@@ -27,12 +25,12 @@
                 '<p>Neutered/Spayed: ' . $row['NeuteredStatus'] . '</p>' .
                 '<p>Date of Birth: ' . $row['DateOfBirth'] . '</p>' .
                 '<p>Description: ' . $row['Description'] . '</p>' .
+                '<a href="adopt.html" class="adopt-button">Adopt Me</a>' . // Add this line for the button
                 '</div>';
         }
     } else {
         echo '<p class="no-pets"> No pets available for adoption at the moment. Please check back another time! </p>';
     }
-
 
     $conn->close();
     ?>
