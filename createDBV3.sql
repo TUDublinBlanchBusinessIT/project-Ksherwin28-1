@@ -23,10 +23,11 @@ CREATE TABLE IF NOT EXISTS petadoption (
 
 CREATE TABLE IF NOT EXISTS adoptions (
     AdoptionID INT(11) NOT NULL AUTO_INCREMENT,
-    pet_id INT(11) NOT NULL,
+    PetID INT(11) NOT NULL,
     adoptperson_name VARCHAR(255) NOT NULL,
     adoptperson_email VARCHAR(255) NOT NULL,
     adopteperson_phonenum VARCHAR(20) NOT NULL,
-    PRIMARY KEY (AdoptionID),petshop
-    FOREIGN KEY (pet_id) REFERENCES petadoption(PetID)
+    PRIMARY KEY (AdoptionID),
+    FOREIGN KEY (PetID) REFERENCES petadoption(PetID)
 );
+
