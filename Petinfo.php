@@ -8,9 +8,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $neutered = $_POST["neutered"];
     $dob = $_POST["dob"];
     $description = $_POST["description"];
+    $phone = $_POST["phone"];
 
-
-    $sql = "INSERT INTO petadoption (PetName, PetType, Gender, NeuteredStatus, DateOfBirth, Description) VALUES ('$petName', '$petType', '$gender', '$neutered', '$dob', '$description')";
+    $sql = "INSERT INTO petadoption (PetName, PetType, Gender, NeuteredStatus, DateOfBirth, Description, phone) VALUES ('$petName', '$petType', '$gender', '$neutered', '$dob', '$description', '$phone')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Pet has been uploaded to our system!";
