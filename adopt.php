@@ -13,9 +13,12 @@
 if (isset($_GET['PetID'])) {
     $PetID = $_GET['PetID'];
 
+
+    // this is a SQL query that selects the pet details from PetID
     $sql = "SELECT * FROM petadoption WHERE PetID = $PetID";
     $result = $conn->query($sql);
 
+    // this actually checks the query and sees if it is successful and that there is one row
     if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
 ?>
