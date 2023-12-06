@@ -1,5 +1,4 @@
 <?php
-
 date_default_timezone_set('GMT');
 
 include('dbcon.php');
@@ -14,6 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($conn->query($sql) === TRUE) {
         echo "Adoption application submitted successfully!";
+        header("refresh:2;url=viewpets.php");
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
