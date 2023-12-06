@@ -16,7 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //if it inserted then success if not error 
     if ($conn->query($sql) === TRUE) {
-        echo "Pet has been uploaded to our system!";
+        echo "Pet Has Been Uploaded To Our System!";
+        header("refresh:2;url=viewpets.php");
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
