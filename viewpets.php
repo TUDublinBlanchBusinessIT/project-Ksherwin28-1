@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+    // Redirect to the login page if the user is not logged in
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +16,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Adoption Whitegate</title>
 </head>
+<style>
+    
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+}
+
+li {
+    width: max-content;
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 24px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+</style>
 <body>
+
+<ul>
+        <li><a  href="HomePage.php">Submit Pet</a></li>
+        <li><a class="active" href="viewpets.php">View Pets</a></li>
+      </ul>
     <h2>These animals are currently up for adoption today!</h2>
 
     <?php
