@@ -75,6 +75,7 @@ li a:hover:not(.active) {
                 '<p>Date of Birth: ' . $row['DateOfBirth'] . '</p>' .
                 '<p>Description: ' . $row['Description'] . '</p>' .
                 '<a href="adopt.php?PetID=' . $row['PetID'] . '" class="adopt-button">Adopt Me</a>' .
+                '<a href="comment.php?PetID=' . $row['PetID'] . '" class="comment-button">Query/Comment</a>' .
                 '</div>';
         }
     } else {

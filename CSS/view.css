@@ -56,3 +56,19 @@ h2 {
 }
 
 
+.comment-button {
+    display: block;
+    background-color: #32b200;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px; 
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 20%;
+}
+
+.comment-button:hover {
+    background-color: rgb(39, 207, 101);
+}
+

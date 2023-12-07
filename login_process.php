@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($enteredPassword === $user['password']) {
             // Set session variable and redirect to the homepage
             $_SESSION['username'] = $enteredUsername;
+            $_SESSION['userID'] = $user['id'];
             header("Location: HomePage.php"); 
             exit();
         } else {
