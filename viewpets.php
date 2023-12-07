@@ -13,7 +13,7 @@
     date_default_timezone_set('GMT');
     include('dbcon.php');
 
-    $sql = "SELECT * FROM petadoption";
+    $sql = "SELECT * FROM petadoption WHERE AdoptionStatus != 'Adopted'";
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {

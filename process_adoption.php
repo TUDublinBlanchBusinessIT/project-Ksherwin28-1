@@ -12,9 +12,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "INSERT INTO adoptions (PetID, adoptperson_name, adoptperson_email, adopteperson_phonenum) VALUES ('$petId', '$name', '$email', '$phone')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Adoption application submitted successfully!";
-        header("refresh:2;url=viewpets.php");
-        exit();
+        // so if the form gets submitted im adding 'Adopted' to the database so can actually track
+        // it goes and updates my table with the petid and we can see its adopted 
+        $updateStatusQuery = "UPDATE petadoption SET AdoptionStatus = 'Adopted' WHERE PetID = $petId";
+        if ($conn->query($updateStatusQuery) === TRUE) {
+            echo "Adoption application submitted successfully!";
+            header("refresh:2;url=viewpets.php");
+            exit();
+        } else {
+            echo "Error: " . $conn->error;
+        }
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -24,4 +31,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: adopt.html");
     exit();
 }
+
 ?>
