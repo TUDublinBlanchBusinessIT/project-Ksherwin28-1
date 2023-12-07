@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST["phone"];
 
     //Just inserts the info into my petadoption table
-    $sql = "INSERT INTO petadoption (PetName, PetType, Gender, NeuteredStatus, DateOfBirth, Description, phone) VALUES ('$petName', '$petType', '$gender', '$neutered', '$dob', '$description', '$phone')";
+    $sql = "INSERT INTO petadoption (PetName, PetType, Gender, NeuteredStatus, DateOfBirth, Description, phone, AdoptionStatus) VALUES ('$petName', '$petType', '$gender', '$neutered', '$dob', '$description', '$phone', 'Available')";
 
 
     //if it inserted then success if not error 
