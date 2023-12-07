@@ -31,3 +31,12 @@ CREATE TABLE IF NOT EXISTS adoptions (
     FOREIGN KEY (PetID) REFERENCES petadoption(PetID)
 );
 
+CREATE TABLE IF NOT EXISTS adoptioncomments (
+    CommentID INT(11) NOT NULL AUTO_INCREMENT,
+    PetID INT(11) NOT NULL,
+    Comment TEXT NOT NULL,
+    CommentDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Number TEXT NOT NULL,
+    PRIMARY KEY (CommentID),
+    FOREIGN KEY (PetID) REFERENCES petadoption(PetID)
+);

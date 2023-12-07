@@ -55,6 +55,7 @@ li a:hover:not(.active) {
 <ul>
         <li><a  href="HomePage.php">Submit Pet</a></li>
         <li><a class="active" href="viewpets.php">View Pets</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
     <h2>These animals are currently up for adoption today!</h2>
 

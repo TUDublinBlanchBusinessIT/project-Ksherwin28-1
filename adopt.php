@@ -6,8 +6,49 @@
     <title>Adopt a Pet</title>
     <link rel="stylesheet" href="CSS/adoptstyle.css"> 
 </head>
-<body>
+<style>
+ ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
 
+        li {
+            width: max-content;
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 24px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+        .content {
+            margin-top: 50px; 
+        }
+</style>
+<body>
+<ul>
+        <li><a class="active" href="HomePage.php">Submit Pet</a></li>
+        <li><a href="viewpets.php">View Pets</a></li>
+        <li><a href="logout.php">Logout</a></li>
+      </ul>
 <?php include('dbcon.php');
 
 if (isset($_GET['PetID'])) {
